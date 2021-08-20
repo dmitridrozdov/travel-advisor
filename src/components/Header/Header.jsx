@@ -4,7 +4,11 @@ import { AppBar, Toolbar, Typography, InputBase, Box } from '@material-ui/core'
 
 const Header = () => {
     return (
-        <h1>Header</h1>
+        <AppBar position='static'>
+            <Toolbar className={classes.toolbar}>
+                <Typography variant='h5'></Typography>
+            </Toolbar>
+        </AppBar>
     )
 }
 
