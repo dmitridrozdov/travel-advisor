@@ -15,7 +15,9 @@ const Header = () => {
                     </Typography>
                     <Autocomplete>
                         <div className={classes.search}>
-
+                            <div className={classes.searchIcon}>
+                                <SearchIcon />
+                            </div>
                         </div>
                     </Autocomplete>
                 </Box>
