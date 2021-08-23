@@ -1,6 +1,7 @@
 import React from 'react'
 import { Autocomplete } from '@material-ui/apio'
 import { AppBar, Toolbar, Typography, InputBase, Box } from '@material-ui/core'
+import SearchIcon from '@material-ui/icons/Search'
 
 const Header = () => {
     return (
@@ -17,6 +18,7 @@ const Header = () => {
                         <div className={classes.search}>
                             <div className={classes.searchIcon}>
                                 <SearchIcon />
+                                <InputBase placeholder='Search...' classes={{ root: classes.inputRoot, input: classes.inputInput }} />
                             </div>
                         </div>
                     </Autocomplete>
