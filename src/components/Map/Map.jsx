@@ -16,7 +16,15 @@ const Map = () => {
                 center={coordinates}
                 defaultZoom={14}
                 margin={[50, 50, 50, 50]}
-                options={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
+                // options={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
+                // onChange={(e) => {
+                //     setCoords({ lat: e.center.lat, lng: e.center.lng });
+                //     setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
+                //   }}
+                // onChildClick={(child) => setChildClicked(child)}
+                options={''}
+                onChange={''}
+                onChildClick={''}
             >
 
             </GoogleMapReact>
