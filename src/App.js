@@ -8,6 +8,7 @@ import { getPlacesData } from './api/index'
 
 const App = () => {
     const [places, setPlaces] = useState([])
+    const [coordinates, setCoordinates] = useState({})
 
     useEffect(() => {
         getPlacesData()
