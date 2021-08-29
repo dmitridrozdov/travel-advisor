@@ -8,16 +8,22 @@ import { getPlacesData } from './api/index'
 
 const App = () => {
     const [places, setPlaces] = useState([])
-    const [coordinates, setCoordinates] = useState({})
+    const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0 })
     const [bounds, setBounds] = useState(null)
 
     useEffect(() => {
-        getPlacesData()
+        navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
+            setCoordinates({ lat: latitude, lng: longitude });
+        })
+      }, [])
+
+    useEffect(() => {
+        getPlacesData(bounds.sw, bounds.ne)
             .then((data) => {
                 console.log(data)
                 setPlaces(data)
             })
-    },[])
+    },[coordinates, bounds])
 
     return(
         <>
@@ -31,6 +37,7 @@ const App = () => {
                     <Map 
                         setCoordinates={setCoordinates}
                         setBounds={setBounds}
+                        coordinates={coordinates}
                     />
                 </Grid>
             </Grid>
