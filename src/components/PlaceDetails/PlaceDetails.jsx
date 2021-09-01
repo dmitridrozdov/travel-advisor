@@ -8,6 +8,7 @@ import useStyles from './styles.js'
 
 const PlaceDetails = ({ place }) => {
     console.log(place) //do not delete ... to explore what else can be on the card
+    const classes = useStyles()
     return (
         <h1>   
           {place.name}  
