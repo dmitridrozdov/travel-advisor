@@ -3,23 +3,23 @@ import PlaceDetails from '../PlaceDetails/PlaceDetails'
 import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core'
 import useStyles from './styles.js'
 
-const List = () => {
+const List = ({  places }) => {
     // const [elRefs, setElRefs] = useState([])
     const classes = useStyles()
     const [type, setType] = useState('restaurants')
     const [rating, setRating] = useState('')
     
-    const places = [
-        { name: 'Cool place' },
-        { name: 'Best Bear' },
-        { name: 'Best Steak' },
-        { name: 'Cool place' },
-        { name: 'Best Bear' },
-        { name: 'Best Steak' },
-        { name: 'Cool place' },
-        { name: 'Best Bear' },
-        { name: 'Best Steak' },
-    ]
+    // const places = [
+    //     { name: 'Cool place' },
+    //     { name: 'Best Bear' },
+    //     { name: 'Best Steak' },
+    //     { name: 'Cool place' },
+    //     { name: 'Best Bear' },
+    //     { name: 'Best Steak' },
+    //     { name: 'Cool place' },
+    //     { name: 'Best Bear' },
+    //     { name: 'Best Steak' },
+    // ]
 
     return (
         <div className={classes.container}>
