@@ -10,9 +10,11 @@ const PlaceDetails = ({ place }) => {
     console.log(place) //do not delete ... to explore what else can be on the card
     const classes = useStyles()
     return (
-        <h1>   
-          {place.name}  
-        </h1>
+        <Card elevation={6}>
+          <CardMedia 
+            style={{ height: 350 }}
+          />
+        </Card>
     )
 }
 
