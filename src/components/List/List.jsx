@@ -3,7 +3,7 @@ import PlaceDetails from '../PlaceDetails/PlaceDetails'
 import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core'
 import useStyles from './styles.js'
 
-const List = ({  places }) => {
+const List = ({ places }) => {
     // const [elRefs, setElRefs] = useState([])
     const classes = useStyles()
     const [type, setType] = useState('restaurants')
