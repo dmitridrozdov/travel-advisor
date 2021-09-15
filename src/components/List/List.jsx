@@ -3,11 +3,18 @@ import PlaceDetails from '../PlaceDetails/PlaceDetails'
 import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core'
 import useStyles from './styles.js'
 
-const List = ({ places }) => {
+const List = ({ places, childClicked }) => {
     // const [elRefs, setElRefs] = useState([])
     const classes = useStyles()
     const [type, setType] = useState('restaurants')
     const [rating, setRating] = useState('')
+    const [elRefs, setElRefs] = useState([])
+
+    // console.log({ childClicked })
+
+    useEffect(() => {
+        setElRefs((refs) => Array(places.length).fill().map((_, i) => refs[i] || createRef()));
+      }, [places])
 
     return (
         <div className={classes.container}>
