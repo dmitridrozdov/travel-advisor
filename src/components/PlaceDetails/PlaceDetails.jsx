@@ -6,7 +6,7 @@ import Rating from '@material-ui/lab/Rating'
 
 import useStyles from './styles.js'
 
-const PlaceDetails = ({ place }) => {
+const PlaceDetails = ({ place, selected, refProp }) => {
     // console.log(place) //do not delete ... to explore what else can be on the card
     const classes = useStyles()
     return (
