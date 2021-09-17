@@ -4,7 +4,6 @@ import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, 
 import useStyles from './styles.js'
 
 const List = ({ places, childClicked }) => {
-    // const [elRefs, setElRefs] = useState([])
     const classes = useStyles()
     const [type, setType] = useState('restaurants')
     const [rating, setRating] = useState('')
