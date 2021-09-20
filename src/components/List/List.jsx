@@ -3,7 +3,7 @@ import PlaceDetails from '../PlaceDetails/PlaceDetails'
 import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core'
 import useStyles from './styles.js'
 
-const List = ({ places, childClicked }) => {
+const List = ({ places, childClicked, isLoading }) => {
     const classes = useStyles()
     const [type, setType] = useState('restaurants')
     const [rating, setRating] = useState('')
