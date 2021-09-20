@@ -41,6 +41,7 @@ const App = () => {
                     <List 
                         places={places}
                         childClicked={childClicked}
+                        isLoading={isLoading}
                     />
                 </Grid>
                 <Grid item xs={12} md={8}>
