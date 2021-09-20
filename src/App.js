@@ -11,6 +11,8 @@ const App = () => {
     const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0 })
     const [bounds, setBounds] = useState({})
     const [childClicked, setChildClicked] = useState(null)
+    
+    const [isLoading, setIsLoading] = useState(false)
 
 
     useEffect(() => {
