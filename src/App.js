@@ -23,9 +23,11 @@ const App = () => {
 
     useEffect(() => {
         if(bounds) {
+            setIsLoading(true)
             getPlacesData(bounds.sw, bounds.ne)
                 .then((data) => {
                     setPlaces(data)
+                    setIsLoading(true)
                 })
         }
     },[coordinates, bounds])
