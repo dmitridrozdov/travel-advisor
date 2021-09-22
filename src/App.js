@@ -27,7 +27,7 @@ const App = () => {
             getPlacesData(bounds.sw, bounds.ne)
                 .then((data) => {
                     setPlaces(data)
-                    setIsLoading(true)
+                    setIsLoading(false)
                 })
         }
     },[coordinates, bounds])
