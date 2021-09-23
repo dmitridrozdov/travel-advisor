@@ -28,6 +28,7 @@ const App = () => {
             getPlacesData(type, bounds.sw, bounds.ne)
                 .then((data) => {
                     setPlaces(data)
+                    setFilteredPlaces([])
                     setIsLoading(false)
                 })
         }
