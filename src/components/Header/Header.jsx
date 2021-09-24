@@ -7,7 +7,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import useStyles from './styles.js';
 
 const Header = ({ onPlaceChanged, onLoad }) => {
-  const classes = useStyles();
+  const classes = useStyles()
+  const [autocomplete, setAutoComplete] = useState(null)
 
   return (
     <AppBar position="static">
