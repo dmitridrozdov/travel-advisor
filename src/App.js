@@ -15,6 +15,7 @@ const App = () => {
     const [rating, setRating] = useState('')
     const [isLoading, setIsLoading] = useState(false)
     const [filteredPlaces, setFilteredPlaces] = useState([])
+    const [autocomplete, setAutocomplete] = useState(null)
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
@@ -23,7 +24,7 @@ const App = () => {
       }, [])
 
     useEffect(() => {
-        if(bounds) {
+        if(bounds.sw && bounds.ne) {
             setIsLoading(true)
             getPlacesData(type, bounds.sw, bounds.ne)
                 .then((data) => {
@@ -32,7 +33,7 @@ const App = () => {
                     setIsLoading(false)
                 })
         }
-    },[type, coordinates, bounds])
+    },[type, bounds])
 
     useEffect(() => {
         const filtered = places.filter((place) => Number(place.rating) > rating)
@@ -42,9 +43,10 @@ const App = () => {
     const onLoad = (autoC) => setAutocomplete(autoC)
 
     const onPlaceChanged = () => {
-        const lat = autocomplete.getPlace().geometry.location.lat()
-        const lng = autocomplete.getPlace().geometry.location.lng()
-        setCoords({ lat, lng })
+        console.log('Autocomplete getPlace is => ' + autocomplete.getPlace().geometry)
+        // const lat = autocomplete.getPlace().geometry.location.lat()
+        // const lng = autocomplete.getPlace().geometry.location.lng()
+        // setCoordinates({ lat, lng })
     }
 
     return(
