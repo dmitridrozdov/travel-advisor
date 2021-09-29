@@ -27,6 +27,10 @@ const App = () => {
     useEffect(() => {
         if(bounds.sw && bounds.ne) {
             setIsLoading(true)
+
+            getWeatherData(coordinates.lat, coordinates.lng)
+                .then((data) => setWeatherData(data))
+
             getPlacesData(type, bounds.sw, bounds.ne)
                 .then((data) => {
                     setPlaces(data?.filter((place) => place.name && place.num_reviews > 0))
@@ -73,6 +77,7 @@ const App = () => {
                         coordinates={coordinates}
                         places={filteredPlaces.length ? filteredPlaces : places}
                         setChildClicked={setChildClicked}
+                        weatherData={weatherData}
                     />
                 </Grid>
             </Grid>
