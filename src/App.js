@@ -16,6 +16,7 @@ const App = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [filteredPlaces, setFilteredPlaces] = useState([])
     const [autocomplete, setAutocomplete] = useState(null)
+    const [weatherData, setWeatherData] = useState([])
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
