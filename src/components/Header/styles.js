@@ -3,10 +3,21 @@ import { alpha, makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   title: {
     display: 'none',
+    fontFamily: 'Handlee',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
   },
+
+  headerSearch: {
+    display: 'none',
+    fontFamily: 'Arsenal',
+    fontSize: '16px',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    },
+  },
+
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
