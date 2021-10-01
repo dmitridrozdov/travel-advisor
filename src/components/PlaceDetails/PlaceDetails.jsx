@@ -11,7 +11,7 @@ const PlaceDetails = ({ place, selected, refProp }) => {
     // console.log(place) //do not delete ... to explore what else can be on the card
     const classes = useStyles()
     return (
-        <Card elevation={6}>
+        <Card elevation={1}>
           <CardMedia 
             style={{ height: 350 }}
             image={place.photo ? place.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'}
