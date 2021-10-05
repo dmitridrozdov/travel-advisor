@@ -1,6 +1,14 @@
 import { alpha, makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
+  
+  appBar: {
+    // zIndex: theme.zIndex.drawer + 1,
+    backgroundColor: theme.palette.background.paper,
+    color: 'black',
+    padding: '10px 0',
+  },
+  
   title: {
     display: 'none',
     fontFamily: 'Handlee',
