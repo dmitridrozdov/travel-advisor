@@ -9,7 +9,7 @@ const Header = ({ onPlaceChanged, onLoad }) => {
   const classes = useStyles()
 
   return (
-    <AppBar position="static" className={classes.appBar}>
+    <AppBar position="static" className={classes.appBar} elevation={1}>
       <Toolbar className={classes.toolbar}>
         <Typography variant="h5" className={classes.title}>
           Restaurants, Hotels, Attractions
