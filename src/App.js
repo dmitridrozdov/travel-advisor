@@ -21,34 +21,33 @@ const App = () => {
   const [childClicked, setChildClicked] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
-      setCoords({ lat: latitude, lng: longitude })
-    })
-  }, [])
+  // useEffect(() => {
+  //   navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
+  //     setCoords({ lat: latitude, lng: longitude })
+  //   })
+  // }, [])
 
-  useEffect(() => {
-    const filtered = places.filter((place) => Number(place.rating) > rating)
+  // useEffect(() => {
+  //   const filtered = places.filter((place) => Number(place.rating) > rating)
+  //   setFilteredPlaces(filtered)
+  // }, [rating])
 
-    setFilteredPlaces(filtered)
-  }, [rating])
+  // useEffect(() => {
+  //   if (bounds) {
+  //     setIsLoading(true)
 
-  useEffect(() => {
-    if (bounds) {
-      setIsLoading(true)
+  //     getWeatherData(coords.lat, coords.lng)
+  //       .then((data) => setWeatherData(data))
 
-      getWeatherData(coords.lat, coords.lng)
-        .then((data) => setWeatherData(data))
-
-      getPlacesData(type, bounds.sw, bounds.ne)
-        .then((data) => {
-          setPlaces(data.filter((place) => place.name && place.num_reviews > 0))
-          setFilteredPlaces([])
-          setRating('')
-          setIsLoading(false)
-        })
-    }
-  }, [bounds, type])
+  //     getPlacesData(type, bounds.sw, bounds.ne)
+  //       .then((data) => {
+  //         setPlaces(data.filter((place) => place.name && place.num_reviews > 0))
+  //         setFilteredPlaces([])
+  //         setRating('')
+  //         setIsLoading(false)
+  //       })
+  //   }
+  // }, [bounds, type])
 
   const onLoad = (autoC) => setAutocomplete(autoC)
 
