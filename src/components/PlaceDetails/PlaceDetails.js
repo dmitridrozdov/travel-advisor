@@ -18,19 +18,19 @@ const PlaceDetails = ({ place, selected, refProp }) => {
         title={place.name}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5">{place.name}</Typography>
+        <Typography gutterBottom variant="h5" className={classes.placeName}>{place.name}</Typography>
         <Box display="flex" justifyContent="space-between" my={2}>
           <Rating name="read-only" value={Number(place.rating)} readOnly />
-          <Typography component="legend">{place.num_reviews} review{place.num_reviews > 1 && 's'}</Typography>
+          <Typography component="legend" className={classes.reviewsFont}>{place.num_reviews} review{place.num_reviews > 1 && 's'}</Typography>
         </Box>
         <Box display="flex" justifyContent="space-between">
-          <Typography component="legend">Price</Typography>
+          <Typography component="legend" className={classes.priceFont}>Price</Typography>
           <Typography gutterBottom variant="subtitle1">
             {place.price_level}
           </Typography>
         </Box>
         <Box display="flex" justifyContent="space-between">
-          <Typography component="legend">Ranking</Typography>
+          <Typography component="legend" className={classes.priceFont}>Ranking</Typography>
           <Typography gutterBottom variant="subtitle1">
             {place.ranking}
           </Typography>
