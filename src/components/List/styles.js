@@ -1,8 +1,16 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
+  subHeader: {
+    fontFamily: 'Montserrat',
+    fontSize: '20px',
+  },
   formControl: {
     margin: theme.spacing(1), minWidth: 120, marginBottom: '30px',
+  },
+  formFont: {
+    fontFamily: 'Montserrat',
+    fontSize: '14px',
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
