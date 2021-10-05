@@ -21,24 +21,24 @@ const PlaceDetails = ({ place, selected, refProp }) => {
         <Typography gutterBottom variant="h5" className={classes.placeName}>{place.name}</Typography>
         <Box display="flex" justifyContent="space-between" my={2}>
           <Rating name="read-only" value={Number(place.rating)} readOnly />
-          <Typography component="legend" className={classes.reviewsFont}>{place.num_reviews} review{place.num_reviews > 1 && 's'}</Typography>
+          <Typography component="legend" className={classes.cardFont}>{place.num_reviews} review{place.num_reviews > 1 && 's'}</Typography>
         </Box>
         <Box display="flex" justifyContent="space-between">
-          <Typography component="legend" className={classes.priceFont}>Price</Typography>
-          <Typography gutterBottom variant="subtitle1">
+          <Typography component="legend" className={classes.cardFont}>Price</Typography>
+          <Typography gutterBottom variant="subtitle1" className={classes.cardFont}>
             {place.price_level}
           </Typography>
         </Box>
         <Box display="flex" justifyContent="space-between">
-          <Typography component="legend" className={classes.priceFont}>Ranking</Typography>
-          <Typography gutterBottom variant="subtitle1">
+          <Typography component="legend" className={classes.cardFont}>Ranking</Typography>
+          <Typography gutterBottom variant="subtitle1" className={classes.cardFont}>
             {place.ranking}
           </Typography>
         </Box>
         {place?.awards?.map((award) => (
           <Box display="flex" justifyContent="space-between" my={1} alignItems="center">
             <img src={award.images.small} />
-            <Typography variant="subtitle2" color="textSecondary">{award.display_name}</Typography>
+            <Typography variant="subtitle2" color="textSecondary" className={classes.awardFont}>{award.display_name}</Typography>
           </Box>
         ))}
         {place?.cuisine?.map(({ name }) => (
