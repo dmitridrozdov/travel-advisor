@@ -10,4 +10,16 @@ export default makeStyles(() => ({
   spacing: {
     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
   },
+  placeName: {
+    fontFamily: 'Handlee',
+    fontSize: '24px',
+  },
+  reviewsFont: {
+    fontFamily: 'Montserrat',
+    fontSize: '14px',
+  },
+  priceFont: {
+    fontFamily: 'Montserrat',
+    fontSize: '16px',
+  },
 }));
